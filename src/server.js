@@ -2,7 +2,10 @@
 import express from 'express';
 import configViewEngine from './configs/ViewEngine';
 const app = express();
-const port = 3000
+    //sử dụng .env 
+    require('dotenv').config();
+    const port = process.env.PORT || 8080;
+//cấu hình view engine
 configViewEngine(app);
 //Hàm gọi Home page
 app.get('/', (req, res) => {
