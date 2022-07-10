@@ -14,6 +14,8 @@ configViewEngine(app);
 import initWebRouter from './router/web';
 initWebRouter(app);
 
+//Ket noi csdl
+import connection from './configs/connectDB';
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
